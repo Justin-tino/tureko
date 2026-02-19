@@ -1,0 +1,19 @@
+{
+  "name": "tureko",
+  "version": "1.0.0",
+  "description": "Tureko - Sustainable Tourism Workforce Solutions",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ejs": "^3.1.9",
+    "dotenv": "^16.3.1",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5"
+  }
+}

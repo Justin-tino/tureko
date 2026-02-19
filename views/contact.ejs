@@ -1,0 +1,132 @@
+<%- include('partials/header') %>
+
+<div class="page-hero">
+  <div class="inner fade">
+    <span class="sec-label">Get In Touch</span>
+    <h1 class="hero-title" style="font-size:clamp(44px,7vw,72px);margin-bottom:18px">Request a Quote</h1>
+    <p style="font-size:16px;color:var(--w55);max-width:480px;margin:0 auto;line-height:1.65">Tell us about your tourism business and sustainability goals. We'll craft the perfect solution.</p>
+  </div>
+</div>
+
+<section class="section" style="padding-top:20px;padding-bottom:120px">
+  <div class="inner">
+    <div class="form-wrap fade">
+
+      <div class="form-heading">Let's Build Something Sustainable</div>
+      <p class="form-sub">Fill in the form below and a Tureko sustainability specialist will contact you within 24 hours.</p>
+
+      <form id="contactForm" action="https://formspree.io/f/mdalznaz" method="POST" novalidate>
+
+        <div class="f-row">
+          <div class="f-g">
+            <label for="businessName">Business Name</label>
+            <input type="text" id="businessName" name="businessName" placeholder="Your Business Name">
+          </div>
+          <div class="f-g">
+            <label for="contactPerson">Contact Person <span class="req">*</span></label>
+            <input type="text" id="contactPerson" name="contactPerson" placeholder="Full Name" required>
+            <span class="err-msg" id="contactPersonErr">Full name is required.</span>
+          </div>
+        </div>
+
+        <div class="f-row">
+          <div class="f-g">
+            <label for="email">Email Address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@business.com" required>
+            <span class="err-msg" id="emailErr">Please enter a valid email address.</span>
+          </div>
+          <div class="f-g">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+63 9XX XXX XXXX">
+          </div>
+        </div>
+
+        <div class="f-row">
+          <div class="f-g">
+            <label for="businessType">Business Type</label>
+            <select id="businessType" name="businessType">
+              <option value="" disabled selected>Select your business type</option>
+              <option>Restaurant</option>
+              <option>Resort</option>
+              <option>Hotel</option>
+              <option>Eco-Park</option>
+              <option>Tourist Destination</option>
+              <option>Travel Operator</option>
+              <option>Tourism LGU</option>
+              <option>Event Tourism Organizer</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="f-g">
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" placeholder="City, Province">
+          </div>
+        </div>
+
+        <div class="f-g">
+          <label>Services Needed</label>
+          <div class="cb-grid">
+            <label class="cb-item"><input type="checkbox" name="services" value="Carbon Footprint Assessment"> Carbon Footprint Assessment</label>
+            <label class="cb-item"><input type="checkbox" name="services" value="Sustainable Workforce"> Sustainable Workforce</label>
+            <label class="cb-item"><input type="checkbox" name="services" value="Energy Efficiency Audit"> Energy Efficiency Audit</label>
+            <label class="cb-item"><input type="checkbox" name="services" value="Waste Management"> Waste Management</label>
+            <label class="cb-item"><input type="checkbox" name="services" value="Plastic-Free Transition"> Plastic-Free Transition</label>
+            <label class="cb-item"><input type="checkbox" name="services" value="Green Tourism Evaluation"> Green Tourism Evaluation</label>
+            <label class="cb-item"><input type="checkbox" name="services" value="ESG Reporting"> ESG Reporting</label>
+            <label class="cb-item"><input type="checkbox" name="services" value="Marine Conservation"> Marine Conservation</label>
+            <label class="cb-item"><input type="checkbox" name="services" value="Biodiversity Planning"> Biodiversity Planning</label>
+            <label class="cb-item"><input type="checkbox" name="services" value="Sustainability Badge"> Sustainability Badge</label>
+          </div>
+        </div>
+
+        <div class="f-row" style="margin-top:4px">
+          <div class="f-g">
+            <label for="workforce">Workforce Required</label>
+            <select id="workforce" name="workforce">
+              <option value="" disabled selected>Select workforce size</option>
+              <option>1–2 Professionals</option>
+              <option>3–5 Professionals</option>
+              <option>6–10 Professionals</option>
+              <option>11–20 Professionals</option>
+              <option>20+ Professionals</option>
+            </select>
+          </div>
+          <div class="f-g">
+            <label for="startDate">Estimated Start Date</label>
+            <input type="date" id="startDate" name="startDate">
+          </div>
+        </div>
+
+        <div class="f-g">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your sustainability goals, challenges, or specific requirements..."></textarea>
+        </div>
+
+        <div class="agree-box">
+          <label class="cb-item">
+            <input type="checkbox" id="agree" name="agreement" value="agreed">
+            I agree that Tureko may contact me regarding my inquiry. My information will be handled securely.
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full submit-btn">
+          Submit Request
+          <svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+
+      </form>
+
+      <!-- SUCCESS STATE -->
+      <div class="form-ok" id="contactOk">
+        <div class="ok-icon-box">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Request Submitted</h3>
+        <p>Thank you for reaching out. A Tureko specialist will contact you within 24 hours.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
